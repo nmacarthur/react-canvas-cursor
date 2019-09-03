@@ -3,9 +3,13 @@ import Paper from 'paper'
 import styles from './styles.css'
 
 class Cursor extends Component {
-  constructor() {
+  constructor({ color, radius, fill }) {
     super()
+    this.color = color
+    this.radius = radius
+    this.fill = fill
   }
+
   componentDidMount() {
     this.clientX = -100
     this.clientY = -100
@@ -46,7 +50,7 @@ class Cursor extends Component {
     const strokeColor = this.color || '#000'
     const strokeWidth = 1
     const segments = 6
-    const radius = 15
+    const radius = this.radius || 15
 
     // the base shape for the noisy circle
     const polygon = new Paper.Path.RegularPolygon(
@@ -55,7 +59,7 @@ class Cursor extends Component {
       radius
     )
     polygon.strokeColor = strokeColor
-    polygon.fillColor = strokeColor
+    polygon.fillColor = this.fill ? strokeColor : 'transparent'
     polygon.strokeWidth = strokeWidth
     polygon.smooth()
     this.group = new Paper.Group([polygon])
