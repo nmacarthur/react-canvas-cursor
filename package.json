@@ -1,6 +1,6 @@
 {
     "name": "react-canvas-cursor",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A React Component that adds a canvas based cursor ",
     "author": "nmacarthur",
     "license": "MIT",
