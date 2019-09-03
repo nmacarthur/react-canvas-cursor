@@ -15,7 +15,9 @@ npm install --save react-canvas-cursor
 Props
 
 color - string (optional -- default '#000')
+
 size - integer (optional -- default 20)
+
 fill - boolean (optional -- default false)
 
 ```jsx
