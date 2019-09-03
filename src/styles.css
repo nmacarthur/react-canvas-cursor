@@ -1,8 +1,49 @@
 /* add css styles here (optional) */
 
-.test {
-  display: inline-block;
-  margin: 2em auto;
-  border: 2px solid #000;
-  font-size: 2em;
+.cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+}
+
+.cursor__small {
+    width: 10px;
+    height: 10px;
+    left: -5px;
+    top: -5px;
+    border-radius: 0%;
+    opacity: 0;
+    z-index: 11000;
+    background: #000;
+}
+
+.cursor__canvas {
+    width: 100vw;
+    height: 100vh;
+    z-index: 12000;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body,
+body a {
+    cursor: none;
+}
+
+.page__inner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.link {
+    pointer-events: auto;
 }
